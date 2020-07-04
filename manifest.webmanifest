@@ -2,7 +2,7 @@
     "short_name": "ePaeko",
     "name": "aPaeko",
     "description": "Ein Prüfungsfachhelfer für das Berliner Gymnasium",
-    "start_url": "/",
+    "start_url": "/ePaeko/",
     "background_color": "#111",
     "display": "standalone",
     "scope": "/",
