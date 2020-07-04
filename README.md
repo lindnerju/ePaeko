@@ -3,7 +3,7 @@ ePäko soll Berliner Schülerinnen und Schüler dabei unterstützen, ihre indivi
 
 Zu diesem Zweck stehen interaktive Eingabefelder für die vier Prüfungsfächer und die 5. Prüfungskomponente zur Verfügung, die stets die verbleibenden Fachkombinationen unter Einhaltung der Vorgaben durch die Verordnung über die gymnasiale Oberstufe (VO-GO) anzeigen. Zudem kann die Erfüllung verschiedener Wahlvorgaben aus der VO-GO bei der Wahl live mitverfolgt werden.
 
-ePäko ist erreichbar unter: https://lindnerju.github.io/epaeko
+ePäko ist erreichbar unter: https://lindnerju.github.io/ePaeko
 
 ## FÜR SCHULEN
 Zurzeit befindet sich ePäko noch in der Pilotphase, um erste Erfahrungen zu sammeln und Rückmeldungen einzuarbeiten. Falls Interesse an einer Integration Ihrer Schule in den ePäko besteht, können Sie gerne hier auf Github [einen Issue eröffnen](https://docs.github.com/en/github/managing-your-work-on-github/creating-an-issue) mit allen benötigten Informationen. Die nachfolgenden Erläuterungen sollten aber zunächst ausführlich durchgelesen werden.
