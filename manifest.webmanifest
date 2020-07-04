@@ -5,7 +5,7 @@
     "start_url": "/ePaeko/",
     "background_color": "#111",
     "display": "standalone",
-    "scope": "/",
+    "scope": "/ePaeko/",
     "theme_color": "#111",
     "icons": [
       {
