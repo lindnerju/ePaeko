@@ -1,7 +1,7 @@
 {
-    "short_name": "ePaeko",
-    "name": "aPaeko",
-    "description": "Ein Prüfungsfachhelfer für das Berliner Gymnasium",
+    "short_name": "ePÄKO",
+    "name": "ePÄKO",
+    "description": "Ein Prüfungsfachwahlhelfer für das Berliner Abitur",
     "start_url": "/ePaeko/",
     "background_color": "#111",
     "display": "standalone",
