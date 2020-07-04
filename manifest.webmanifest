@@ -1,0 +1,27 @@
+{
+    "short_name": "ePaeko",
+    "name": "aPaeko",
+    "description": "Ein Prüfungsfachhelfer für das Berliner Gymnasium",
+    "start_url": "/",
+    "background_color": "#111",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#111",
+    "icons": [
+      {
+        "src": "img/PaekoHelfer_Icon.ico",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "img/icon-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "img/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }

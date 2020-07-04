@@ -1,0 +1,626 @@
+/*
+MIT License
+
+Copyright (c) 2020 Julian Lindner, Simon Lindner
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+* {
+    margin: 0 0 0 0px;
+    padding: 0 0 0px;
+    text-decoration: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {   
+    scroll-behavior: smooth; 
+}
+
+body {
+    background-color: #f3f3f3;
+    height: 100%;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    display: table;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    border-style: solid;
+    border-width: .5px;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: rgb(94, 94, 110);
+  }
+
+  input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: .5px;
+  }
+
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    border-style: solid;
+    border-width: .5px;
+  }
+  
+  input[type="radio"]:checked {
+    background-color: rgb(94, 94, 110);
+  }
+
+header {
+    width: 100%;
+    background-color:  rgb(42, 42, 51);
+    height: 100px;
+}
+nav ul li {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 15px 0 15px;
+    display: inline-block;
+}
+nav ul li a {
+    font-family: "Arial";
+    font-size: 16px;
+    color: #fff;  
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0 15px 0;
+    cursor: pointer;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0 15px 0;
+    font-family: "Arial Black";
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+}
+#Github{
+    display: none;
+    font-family: "Arial";
+    font-size: 16px;
+    color: #fff;  
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0 15px 0;
+    cursor: pointer;
+}
+
+select { 
+    width: 200px;
+    height: 30px; 
+    outline: none;
+    border-radius: 2px;
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    background: rgb(94, 94, 110);
+    color: white;
+    text-indent: 5px;
+}
+
+footer {
+    width: calc(100% - 80px);
+    overflow: hidden;
+    padding: 40px 40px;
+    background-color: rgb(42, 42, 51);
+}
+.default_cookie_padding {
+    padding-bottom: 80px;
+}
+
+footer ul {
+    padding-left: 20px;
+}
+
+footer ul li {
+    list-style: none;
+}
+footer ul li {
+    list-style: none;
+}
+
+.show_list_style {
+    list-style: disc;
+}
+
+footer ul li details ul li {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: none;
+    max-width: 600px;
+    color: white;
+    font-family: "Arial";
+    font-weight: 300;
+}
+footer ul li details h3 {
+    max-width: 600px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+footer ul li a {
+    font-family: "Arial";
+    font-size: 24px;
+    color: #fff;  
+    text-transform: uppercase;
+    line-height: 40px;
+}
+
+footer ul li p {
+    font-family: "Arial";
+    font-size: 24px;
+    color: #fff;  
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+footer ul li details summary::-webkit-details-marker {
+    display: none;
+  }
+
+footer ul li details summary {
+    list-style: none;
+ }
+
+footer ul li details summary {
+    font-family: "Arial";
+    font-size: 24px;
+    color: #fff;  
+    text-transform: uppercase;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+footer ul li details p {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: none;
+    max-width: 600px;
+}
+
+footer ul li details h2 {
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 40px;
+    color: #fff;  
+    margin-top: 15px;
+}
+
+footer ul li details h3 {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 40px;
+    color: #fff;  
+    margin-top: 15px;
+}
+
+.default_section {
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 100%;
+    width:-moz-fit-content;
+    width:-webkit-fit-content;
+    width:-ms-fit-content;
+    padding: 20px 0 20px 0;
+}
+#Klassen_section {
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 80%;
+    width:-moz-fit-content;
+    width:-webkit-fit-content;
+    width:-ms-fit-content;
+    padding: 20px 0 20px 0;
+}
+
+.default_div {
+    width: fit-content;
+    width:-moz-fit-content;
+    width:-webkit-fit-content;
+    width:-ms-fit-content;
+    max-width: 280px;
+    padding: 20px 20px 20px 20px;
+    vertical-align: top;
+}
+#Beschreibungs_div {
+    width: fit-content;
+    max-width: 80%;
+    padding: 20px 20px 20px 20px;
+    font-family: Arial;
+    color: #111;
+    font-weight: 300;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 20px 0;
+}
+
+.default_div h3 {
+    font-family: Arial;
+    color: #111;
+    font-weight: 300;
+    margin-bottom: 15px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.default_div h4 {
+    font-family: Arial;
+    color: #111;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.Checkboxes h3 {
+    font-family: Arial;
+    color: #111;
+    font-weight: 300;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.buttons {
+    left: 15px;
+    bottom: 15px;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.active_buttons {
+    cursor: pointer;
+}
+.active_labels {
+    cursor: pointer;
+    user-select: none;
+}
+.headline {
+    font-family: Arial;
+    color: #111;
+    font-weight: 300;
+    font-size: 21px;
+    position: relative;
+    bottom: 10px;
+    left: 25px;
+}
+.Sprachen_div{
+    margin: 0 auto;
+    width: fit-content;
+    width:-moz-fit-content;
+    width:-webkit-fit-content;
+    width:-ms-fit-content;
+}
+#Schulauswahllabel {
+    position: relative;
+    left: 20px;
+    top: 0px;
+}
+
+#SchulAuswahl {
+    margin-top: 15px;
+    width: 295px;
+    display: table;
+    display: inline-block;
+}
+
+p {
+    font-family: "Arial";
+    font-size: 20px;
+    color: black;  
+    line-height: 30px;
+    font-weight: 300;
+}
+.radiolabels {
+    font-family: Arial;
+    color: #111;
+    font-weight: 300;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.checkboxlabels {
+    font-family: Arial;
+    color: #111;
+    font-weight: 300;
+    font-size: 15px;
+    margin-right: 5px;
+}
+button {
+    margin: 5px 5px 5px 5px;
+}
+section {
+    width: 100%;
+}
+#Javascript_banner {
+    background-color: rgb(94, 94, 110);
+    position: fixed;
+    bottom: 0px;
+}
+#Javascript_banner h3 {
+    padding: 20px 0;
+    font-family: "Arial";
+    font-size: 16px;
+    color: #fff;  
+    text-align: center;
+}
+#Beschreibungs_button {
+    position: relative;
+    left: 125px;
+    bottom: -8px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: rgb(94, 94, 110);
+    color: white;
+}
+#Cookie_banner {
+    background-color: rgb(94, 94, 110);
+    position: fixed;
+    bottom: 0px;
+}
+#Cookie_banner h3 {
+    padding: 20px 0;
+    font-family: "Arial";
+    font-size: 16px;
+    color: #fff;  
+    text-align: center;
+}
+#Cookie_banner div {
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 90%;
+}
+#Cookie_banner div h3 {
+    float: left;
+}
+#Cookie_banner div button {
+    float: right;
+    padding: 5px 25px;
+    position: relative;
+    top: 8px;
+    left: 20px;
+}
+.hidden{
+    display: none;
+}
+#Beschreibungs_section {
+    background-color: rgb(94, 94, 110);
+}
+#klassen_ueberschrift h3 {
+    font-family: Arial;
+    color: #111;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    max-width: 400px;
+}
+#klassen_ueberschrift {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 300px;
+}
+
+#Schul_div {
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 300px;
+    height: 80px;
+}
+#Beschreibungstext {
+    color: white;
+    font-family: "Arial";
+    font-size: 16px;
+    color: #fff;  
+    text-align: left;
+}
+#Gesetze_button {
+    position: relative;
+    left: 120px;
+    bottom: -12px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: rgb(94, 94, 110);
+    color: white;
+}
+#Gesetzes_div{
+    width: 100%;
+}
+.Gesetzestext {
+    font-family: Arial;
+    color: #111;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;
+}
+#Gesetzeslink {
+    font-family: Arial;
+    color: #111;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    font-style: italic
+}
+#Gesetzeslink a {
+    cursor: pointer;
+    color: #111;
+    text-decoration: underline;
+    
+}
+#Checkboxes_Klasse10 {
+    vertical-align: top;
+    margin: 0 auto;
+    width: fit-content;
+}
+#Checkboxes_Klasse9 {
+    margin: 0 auto;
+    width: fit-content;
+}
+.italic {
+    font-style: italic;
+}
+.font-size_18px {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+#Combobox5Label {
+    left: 18px;
+}
+.text_section {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .default_section {
+        max-width: 740px;
+    }
+    #Github{
+        display: block;
+        float: right;
+        padding: 8px 12px;
+        border: .5px solid white;
+        margin: 25px 60px 0 0;
+    }
+
+    #klassen_ueberschrift h3 {
+        padding: 00px 0 0 0;
+    }
+    #Beschreibungs_button {
+        left: -45px;
+        bottom: 35px;
+        width: 30px;
+        height: 30px;
+    }
+    #Gesetze_button {
+        left: 300px;
+        bottom: -15px;
+        width: 30px;
+        height: 30px;
+    }
+    .default_div {
+        max-width: 300px;
+        display: inline-block;
+    }
+    #Klassen_section {
+        padding: 0 0 0 0;
+    }
+    .hidden{
+        display: none;
+    }
+    .div_selection_menu {
+        width: 200px;
+    }
+    #div_criteria {
+        max-width: 680px;
+    }
+    #Checkboxes_Klasse10 {
+        vertical-align: top;
+    }
+
+    .text_section {
+        max-width: 600px;
+    }
+    #section_criteria {
+        padding: 0px 0 50px 0px;
+    }
+    #div_selection_menu5{
+        padding: 20px 0 0 16px;
+    }
+    #Beschreibungs_section {
+        width: 100%;
+        max-width: 100%;
+    }
+    #Beschreibungs_div {
+        max-width: 600px;
+    }
+    header {
+        height: 89px;
+    }
+    .logo {
+        text-align: left;
+        width: fit-content;
+        float: left;
+        margin-top: 25px;
+        margin-left: 50px;
+        border-right: solid white;
+        padding: 0 20px 0 0;
+    }
+    nav ul {
+        float: left;
+        margin-left: 30px;
+        margin-top: 35px;
+    }
+    #Checkboxes_Klasse10 {
+        display: inline-block;
+    }
+    #Checkboxes_Klasse9 {
+        display: inline-block;
+    }
+
+
+}
+
+@media only screen and (min-width: 1280px) {
+    .default_section {
+        max-width: 1230px;
+    }
+    #Beschreibungs_div {
+        max-width: 800px;
+    }
+
+}
