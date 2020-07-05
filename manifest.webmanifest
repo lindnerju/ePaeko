@@ -3,10 +3,10 @@
     "name": "ePÄKO",
     "description": "Ein Prüfungsfachwahlhelfer für das Berliner Abitur",
     "start_url": "/ePaeko/",
-    "background_color": "#111",
+    "background_color": "#2a2a33",
     "display": "standalone",
     "scope": "/ePaeko/",
-    "theme_color": "#111",
+    "theme_color": "#2a2a33",
     "icons": [
       {
         "src": "img/icon-48.png",
