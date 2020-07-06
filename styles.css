@@ -152,19 +152,15 @@ footer {
     padding-bottom: 80px;
 }
 
-footer ul {
-    padding-left: 20px;
-}
-
 footer ul li {
     list-style: none;
-}
-footer ul li {
-    list-style: none;
+    padding-top: 10px;
 }
 
 .show_list_style {
     list-style: disc;
+    padding-left: 5px;
+    margin-left: 12px;
 }
 
 footer ul li details ul li {
@@ -610,6 +606,10 @@ section {
     }
     #Checkboxes_Klasse9 {
         display: inline-block;
+    }
+    footer ul li {
+        margin-left: 20px;
+        padding-right: 20px;
     }
 
 
