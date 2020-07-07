@@ -582,7 +582,7 @@ section {
         max-width: 100%;
     }
     #Beschreibungs_div {
-        max-width: 600px;
+        max-width: 560px;
     }
     header {
         height: 89px;
@@ -620,7 +620,7 @@ section {
         max-width: 1230px;
     }
     #Beschreibungs_div {
-        max-width: 800px;
+        max-width: 600px;
     }
 
 }
