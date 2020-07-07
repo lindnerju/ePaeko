@@ -200,6 +200,8 @@ function OberflaecheZuruecksetzen() {
     document.getElementById("Klassen_section").classList.add("hidden");
     document.getElementById("Selection_section").classList.remove("hidden");
     document.getElementById("section_criteria").classList.remove("hidden");
+    document.getElementById("Checkboxes_Klasse9").classList.remove("display_block");
+    document.getElementById("Checkboxes_Klasse10").classList.remove("display_block");
     Beschreibung_sichtbar = false;
 }
 
@@ -367,6 +369,11 @@ function FachCheckBoxesErzeugen() {
         }
         Klasse10.insertAdjacentHTML('afterbegin', neuesElement);
         document.getElementById("Klassen_section").classList.remove("hidden");
+    }
+    if (Checkboxes_Klasse9 != "" && Checkboxes_Klasse10 == "") {
+        document.getElementById("Checkboxes_Klasse9").classList.add("display_block");
+    } else if (Checkboxes_Klasse10 != "" && Checkboxes_Klasse9 == ""){
+        document.getElementById("Checkboxes_Klasse10").classList.add("display_block");
     }
 }
 
