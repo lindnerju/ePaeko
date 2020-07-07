@@ -272,8 +272,8 @@ function FaecherGrundauswahlUebertragen() {
         'Alt-Griechisch','Musik','Bildende Kunst','Darstellendes Spiel',
         'Politikwissenschaft','Geschichte','Geografie','Philosophie','Mathematik',
         'Physik','Chemie','Biologie','Informatik','Sport'];
-        Checkboxes_Klasse9_String = ['Französisch','Alt-Griechisch'];
-        Checkboxes_Klasse10_String = ['Informatik'];
+        Checkboxes_Klasse9_String = ['Französisch','Alt-Griechisch','Informatik'];
+        Checkboxes_Klasse10_String = [];
         SchulBeschreibung = "Philosophie im 2. Prüfungsfach wird zwar prinzipiell angeboten, kommt aber nur selten zustande.<br><br>Das Wahltool auf dieser Seite berücksichtigt nicht die Verpflichtungen, die sich für den altsprachlichen Bildungsgang in der Qualifikationsphase ergeben.";
     //3. Schule: Musikgymnasium Carl Philipp Emanuel Bach
     } else if (schule == 'Musikgymnasium Carl Philipp Emanuel Bach') {
