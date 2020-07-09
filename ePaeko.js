@@ -96,29 +96,18 @@ Eventlisteneranfuegen();
 document.getElementById("Javascript_banner").classList.add("hidden");
 document.getElementsByTagName("footer")[0].classList.remove("default_cookie_padding");
 //document.getElementById("Cookie_banner").classList.remove("hidden");
+
 function Eventlisteneranfuegen() {
     if (navigator.userAgent.indexOf("Firefox") != -1 && !navigator.userAgent.match(/mobile/i)) {
-        document.getElementById("Combobox1").setAttribute("onclick", "PruefungsfachClick(1, this)");
-        document.getElementById("Combobox2").setAttribute("onclick", "PruefungsfachClick(2, this);");
-        document.getElementById("Combobox3").setAttribute("onclick", "PruefungsfachClick(3, this);");
-        document.getElementById("Combobox4").setAttribute("onclick", "PruefungsfachClick(4, this);");
-        document.getElementById("Combobox5").setAttribute("onclick", "PruefungsfachClick(5, this);");
-        document.getElementById("Combobox1").setAttribute("onchange", "PruefungsfachChange(1, value, 'Firefox')");
-        document.getElementById("Combobox2").setAttribute("onchange", "PruefungsfachChange(2, value, 'Firefox')");
-        document.getElementById("Combobox3").setAttribute("onchange", "PruefungsfachChange(3, value, 'Firefox')");
-        document.getElementById("Combobox4").setAttribute("onchange", "PruefungsfachChange(4, value, 'Firefox')");
-        document.getElementById("Combobox5").setAttribute("onchange", "PruefungsfachChange(5, value, 'Firefox')");
+        for (let Pruefungsfach = 1; Pruefungsfach < 6; Pruefungsfach++) {
+            document.getElementById("Combobox" + Pruefungsfach).setAttribute("onclick", "PruefungsfachClick(" + Pruefungsfach + ", this);");
+            document.getElementById("Combobox" + Pruefungsfach).setAttribute("onchange", "PruefungsfachChange(" + Pruefungsfach + ", value, 'Firefox');");
+        }
     } else {
-        document.getElementById("Combobox1").setAttribute("onmousedown", "PruefungsfachClick(1, this);");
-        document.getElementById("Combobox2").setAttribute("onmousedown", "PruefungsfachClick(2, this);");
-        document.getElementById("Combobox3").setAttribute("onmousedown", "PruefungsfachClick(3, this);");
-        document.getElementById("Combobox4").setAttribute("onmousedown", "PruefungsfachClick(4, this);");
-        document.getElementById("Combobox5").setAttribute("onmousedown", "PruefungsfachClick(5, this);");
-        document.getElementById("Combobox1").setAttribute("onchange", "PruefungsfachChange(1, value, 'Else')");
-        document.getElementById("Combobox2").setAttribute("onchange", "PruefungsfachChange(2, value, 'Else')");
-        document.getElementById("Combobox3").setAttribute("onchange", "PruefungsfachChange(3, value, 'Else')");
-        document.getElementById("Combobox4").setAttribute("onchange", "PruefungsfachChange(4, value, 'Else')");
-        document.getElementById("Combobox5").setAttribute("onchange", "PruefungsfachChange(5, value, 'Else')");
+        for (let Pruefungsfach = 1; Pruefungsfach < 6; Pruefungsfach++) {
+            document.getElementById("Combobox" + Pruefungsfach).setAttribute("onmousedown", "PruefungsfachClick(" + Pruefungsfach + ", this);");
+            document.getElementById("Combobox" + Pruefungsfach).setAttribute("onchange", "PruefungsfachChange(" + Pruefungsfach + ", value, 'Else');");
+        }
     }
 }
 
@@ -721,12 +710,14 @@ function PruefungsfachChange(Pruefungsfach, Fach, Browser) {
     //Aufruf, wenn ein neues Fach in einem Prüfungsfach/der 5.PK angeklickt wird
     //Speichere das Fach in Pruefungsfaecher, mach den Regelcheck und rufe die Funktion auf, die einen Alarm
     //gibt, falls die Wahl vollständig, aber leider ungültig ist.
-    if (Browser == "Firefox") {
-        wurde_geaendert = true;
+    if (Fach != "") {
+        if (Browser == "Firefox") {
+            wurde_geaendert = true;
+        }
+        Pruefungsfaecher[Pruefungsfach] = FachZuID(Fach);
+        RegelCheck();
+        AlarmBeiUngueltigerWahl();
     }
-    Pruefungsfaecher[Pruefungsfach] = FachZuID(Fach);
-    RegelCheck();
-    AlarmBeiUngueltigerWahl();
 }
 
 function AlarmBeiUngueltigerWahl() {
