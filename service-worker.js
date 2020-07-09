@@ -1,8 +1,9 @@
 /* Der service-worker macht die PWA offline-capable*/
 
 //Falls Ressourcen geupdatet werden, muss der cacheName verändert werden, damit er automatisch erneuert wird bei der nächsten Internetverbindung
-var cacheName = 'ePaeko-v1';
+var cacheName = 'ePaeko-v2';
 var contentToCache = [
+  '/ePaeko/',
   '/ePaeko/index.html',
   '/ePaeko/styles.css',
   '/ePaeko/ePaeko.js',
