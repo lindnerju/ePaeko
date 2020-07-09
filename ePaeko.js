@@ -103,6 +103,8 @@ function BrowserHerausfinden() {
     //Die Funktion findet den Browser heraus und speichert ihn in der Variable Browser
     if (navigator.userAgent.indexOf("Firefox") != -1 && !navigator.userAgent.match(/mobile/i)) {
         Browser = "FirefoxDesktop";
+    } else if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i)) {
+        Browser = "iOS";
     } else {
         Browser = "Else";
     }
@@ -753,7 +755,10 @@ function AlarmBeiUngueltigerWahl() {
 
 function FaecherInComboBoxesEintragen(Pruefungsfach, Element) {
     //Trage alle Fächer aus dem FaecherZwischenspeicher, die noch wählbar sind in die entsprechende Combobox ein
-    let neuesElement = [];
+    let neuesElement = "";
+    if (Browser == "iOS") {
+        neuesElement = "<option value=''></option>";
+    }
     for (let FachID = 0; FachID < FaecherMenge.length; FachID++) {
         if (FaecherZwischenspeicher[Pruefungsfach][FachID] == true) {
             let Fach = IDzuFach(FachID);
