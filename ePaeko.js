@@ -56,6 +56,7 @@ var schule = "";
 var SchulBeschreibung = "";
 var Beschreibung_sichtbar = false;
 var Gesetze_sichtbar = false;
+var Browser = "";
 //Hier nur alle Fächer hinschreiben, die auch im Code benötigt werden. Die Nummer muss unbedingt mit der Indexnummer des Fachs in FaecherMenge übereinstimmen!!!
 var Deutsch = 1;
 var Englisch = 2;
@@ -92,21 +93,32 @@ var FaecherMenge = ['Sport','Deutsch','Englisch','Französisch','Italienisch','S
 /*Erste Ausführung*/
 fuegeSchulenEin();
 MengenDefinieren();
+BrowserHerausfinden();
 Eventlisteneranfuegen();
 document.getElementById("Javascript_banner").classList.add("hidden");
 document.getElementsByTagName("footer")[0].classList.remove("default_cookie_padding");
 //document.getElementById("Cookie_banner").classList.remove("hidden");
 
-function Eventlisteneranfuegen() {
+function BrowserHerausfinden() {
+    //Die Funktion findet den Browser heraus und speichert ihn in der Variable Browser
     if (navigator.userAgent.indexOf("Firefox") != -1 && !navigator.userAgent.match(/mobile/i)) {
+        Browser = "FirefoxDesktop";
+    } else {
+        Browser = "Else";
+    }
+}
+
+function Eventlisteneranfuegen() {
+    //Die Funktion fügt die event-listener für die Comboboxen hinzu
+    if (Browser == "FirefoxDesktop") {
         for (let Pruefungsfach = 1; Pruefungsfach < 6; Pruefungsfach++) {
             document.getElementById("Combobox" + Pruefungsfach).setAttribute("onclick", "PruefungsfachClick(" + Pruefungsfach + ", this);");
-            document.getElementById("Combobox" + Pruefungsfach).setAttribute("onchange", "PruefungsfachChange(" + Pruefungsfach + ", value, 'Firefox');");
+            document.getElementById("Combobox" + Pruefungsfach).setAttribute("onchange", "PruefungsfachChange(" + Pruefungsfach + ", value);");
         }
     } else {
         for (let Pruefungsfach = 1; Pruefungsfach < 6; Pruefungsfach++) {
             document.getElementById("Combobox" + Pruefungsfach).setAttribute("onmousedown", "PruefungsfachClick(" + Pruefungsfach + ", this);");
-            document.getElementById("Combobox" + Pruefungsfach).setAttribute("onchange", "PruefungsfachChange(" + Pruefungsfach + ", value, 'Else');");
+            document.getElementById("Combobox" + Pruefungsfach).setAttribute("onchange", "PruefungsfachChange(" + Pruefungsfach + ", value);");
         }
     }
 }
@@ -706,12 +718,12 @@ function AlarmBeiUnvollstaendigerWahl(Pruefungsfach) {
     }
 }
 
-function PruefungsfachChange(Pruefungsfach, Fach, Browser) {
+function PruefungsfachChange(Pruefungsfach, Fach) {
     //Aufruf, wenn ein neues Fach in einem Prüfungsfach/der 5.PK angeklickt wird
     //Speichere das Fach in Pruefungsfaecher, mach den Regelcheck und rufe die Funktion auf, die einen Alarm
     //gibt, falls die Wahl vollständig, aber leider ungültig ist.
     if (Fach != "") {
-        if (Browser == "Firefox") {
+        if (Browser == "FirefoxDesktop") {
             wurde_geaendert = true;
         }
         Pruefungsfaecher[Pruefungsfach] = FachZuID(Fach);
