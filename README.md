@@ -9,6 +9,10 @@ ePäko ist erreichbar unter: https://lindnerju.github.io/ePaeko
 Implementiert wurden bislang (05.07.2020):
 - Heinz-Berggruen-Gymnasium
 
+## Spenden
+Da die Entwicklung von ePäko mit hohem zeitlichen Aufwand verbunden war und es als Open-Source Projekt zum Nutzen der Allgemeinheit veröffentlicht wurde, freuen wir uns sehr über Spenden.
+[![paypal](https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KEBJ9ZKSB2VH8)
+
 ## Für Schulen
 Zurzeit befindet sich ePäko noch in der Pilotphase, um erste Erfahrungen zu sammeln und Rückmeldungen einzuarbeiten. Falls Interesse an einer Integration Ihrer Schule in ePäko besteht, können Sie gerne hier auf Github [einen Issue eröffnen](https://docs.github.com/en/github/managing-your-work-on-github/creating-an-issue) mit allen benötigten Informationen. Die nachfolgenden Erläuterungen sollten aber zunächst ausführlich durchgelesen werden.
 
@@ -24,7 +28,3 @@ Zurzeit befindet sich ePäko noch in der Pilotphase, um erste Erfahrungen zu sam
 - Eine Liste jener Fächer, die ab oder vor der 10. Klasse belegt werden konnten aber nicht mussten (§ 23 Abs. 5 VO-GO); Fremdsprachen, die schon in der Liste ab Klasse 9 oder früher stehen, sollen in dieser Liste hier nur dann zusätzlich aufgeschrieben werden, wenn es ab der 10. Klasse nochmals die Möglichkeit für deren Belegung gab
 - Zusatzregeln, die es an der Schule gibt, die sich nicht aus der VO-GO ergeben (z. B. stehen an einer Schule Ma/De/En in Prüfungsfach 1 und Prüfungsfach 4 zur Auswahl, wo beschlossen wurde, dass die Wahl von De oder En in dem einen Prüfungsfach immer mit Ma im jeweils anderen Prüfungsfach kombiniert werden muss); dies muss stets zusätzlich in ePäko implementiert werden
 - Bemerkungen, die über das „i“ neben der Schulauswahl ausgeklappt werden können; dort kann beispielsweise vermerkt werden, dass bestimmte Leistungskurse zwar prinzipiell angeboten werden, aber häufig nicht zustande kommen
-
-## Spenden
-Da die Entwicklung von ePäko mit hohem zeitlichen Aufwand verbunden war und es als Open-Source Projekt zum Nutzen der Allgemeinheit veröffentlicht wurde, freuen wir uns sehr über Spenden.
-[![paypal](https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KEBJ9ZKSB2VH8)
