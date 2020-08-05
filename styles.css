@@ -132,12 +132,10 @@ select {
     height: 30px; 
     outline: none;
     border-radius: 2px;
-    appearance: none;
     cursor: pointer;
     border: none;
     background: rgb(94, 94, 110);
     color: white;
-    text-indent: 5px;
 }
 
 footer {
