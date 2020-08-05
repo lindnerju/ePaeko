@@ -20,19 +20,6 @@ self.addEventListener('install', (e) => {
   );
 });
 
-self.addEventListener('fetch', (e) => {
-  e.respondWith(
-    caches.match(e.request).then((r) => {
-      return r || fetch(e.request).then((response) => {
-        return caches.open(cacheName).then((cache) => {
-          cache.put(e.request, response.clone());
-          return response;
-        });
-      });
-    })
-  );
-});
-
 self.addEventListener('activate', (event) => {
   var cacheKeeplist = [cacheName];
   event.waitUntil(
@@ -42,6 +29,19 @@ self.addEventListener('activate', (event) => {
           return caches.delete(key);
         }
       }));
+    })
+  );
+});
+
+self.addEventListener('fetch', (e) => {
+  e.respondWith(
+    caches.match(e.request).then((r) => {
+      return r || fetch(e.request).then((response) => {
+        return caches.open(cacheName).then((cache) => {
+          cache.put(e.request, response.clone());
+          return response;
+        });
+      });
     })
   );
 });
