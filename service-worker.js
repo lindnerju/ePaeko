@@ -20,18 +20,18 @@ self.addEventListener('install', (e) => {
   );
 });
 
-self.addEventListener('activate', (event) => {
-  var cacheKeeplist = [cacheName];
-  event.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(keyList.map((key) => {
-        if (cacheKeeplist.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
-  );
-});
+// self.addEventListener('activate', (event) => {
+//   var cacheKeeplist = [cacheName];
+//   event.waitUntil(
+//     caches.keys().then((keyList) => {
+//       return Promise.all(keyList.map((key) => {
+//         if (cacheKeeplist.indexOf(key) === -1) {
+//           return caches.delete(key);
+//         }
+//       }));
+//     })
+//   );
+// });
 
 self.addEventListener('fetch', (e) => {
   e.respondWith(
