@@ -5,6 +5,8 @@ Zu diesem Zweck stehen interaktive Eingabefelder für die vier Prüfungsfächer 
 
 ePäko ist erreichbar unter: https://lindnerju.github.io/ePaeko
 
+![Screenshoot von ePäko](img/Screenshoot.png)
+
 ## Implementierte Schulen
 Implementiert wurden bislang (05.07.2020):
 - Heinz-Berggruen-Gymnasium
