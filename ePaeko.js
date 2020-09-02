@@ -101,7 +101,7 @@ function BrowserHerausfinden() {
     //Die Funktion findet den Browser heraus und speichert ihn in der Variable Browser
     if (navigator.userAgent.indexOf("Firefox") != -1 && !navigator.userAgent.match(/mobile/i)) {
         Browser = "FirefoxDesktop";
-    } else if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i)) {
+    } else if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || (navigator.userAgent.includes("Mac") && "ontouchend" in document)) {
         Browser = "iOS";
     } else {
         Browser = "Else";

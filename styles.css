@@ -323,6 +323,7 @@ footer ul li details h3 {
     position: relative;
     bottom: 10px;
     left: 25px;
+    pointer-events: none;
 }
 .Sprachen_div{
     margin: 0 auto;
