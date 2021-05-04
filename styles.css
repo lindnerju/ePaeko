@@ -189,7 +189,7 @@ footer ul li p {
     text-transform: uppercase;
 }
 
-footer ul li details summary::-webkit-details-marker {
+footer ul li details summary::marker {
     display: none;
   }
 
