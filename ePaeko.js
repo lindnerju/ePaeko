@@ -137,11 +137,11 @@ function GesetzeAnzeigen() {
     //Klappt die weiteren Absätze des dargestellten Gesetzestextes aus
     if (Gesetze_sichtbar == false) {
         document.getElementById("Gesetzes_div").classList.remove("hidden");
-        document.getElementById("section_criteria").scrollIntoView(true);
+        // document.getElementById("section_criteria").scrollIntoView(true);
         Gesetze_sichtbar = true;
     } else {
         document.getElementById("Gesetzes_div").classList.add("hidden");
-        document.getElementById("section_criteria").scrollIntoView(true);
+        // document.getElementById("section_criteria").scrollIntoView(true);
         Gesetze_sichtbar = false;
     }
 }
