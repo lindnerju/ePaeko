@@ -389,6 +389,7 @@ function PruefungsFormWechsel(value) {
     Pruefungsfaecher[5] = -1;
     document.getElementById("Combobox5").value = "";
     RegelCheck();
+    PrintButtonAnzeigen();
 }
 
 function FachZuID(Fach) {
