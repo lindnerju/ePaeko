@@ -203,6 +203,7 @@ function OberflaecheZuruecksetzen() {
     document.getElementById("section_criteria").classList.remove("hidden");
     document.getElementById("Checkboxes_Klasse9").classList.remove("display_block");
     document.getElementById("Checkboxes_Klasse10").classList.remove("display_block");
+    document.getElementById("Print_button").classList.add("hidden");
     Beschreibung_sichtbar = false;
 }
 
@@ -699,6 +700,7 @@ function PruefungsfachClick(Pruefungsfach, Element) {
         FaecherInComboBoxesEintragen(Pruefungsfach, Element);
         Element.value = "";
         AlarmBeiUnvollstaendigerWahl(Pruefungsfach);
+        PrintButtonAnzeigen();
     } else {
         wurde_geaendert = false;
     }
@@ -729,6 +731,7 @@ function PruefungsfachChange(Pruefungsfach, Fach) {
         Pruefungsfaecher[Pruefungsfach] = FachZuID(Fach);
         RegelCheck();
         AlarmBeiUngueltigerWahl();
+        PrintButtonAnzeigen();
     }
 }
 
@@ -748,6 +751,20 @@ function AlarmBeiUngueltigerWahl() {
         if (fachmehrmals == true || SchulEigenRegelnErfuellt == false || ZweiPruefungsfaecherRegelCheck == false || AufgabenfelderRegel == false || LeistungsKursregelCheck == false || EntspannteFaecherInDreiVier > 1) {
             setTimeout(function(){ alert('Die Wahl scheint leider ungültig zu sein!\nIrgendetwas ist schiefgelaufen.'); }, 500);
         }
+    }
+}
+
+function PrintButtonAnzeigen() {
+    let counter = 0;
+    for (let Pruefungsfach = 1; Pruefungsfach < 6; Pruefungsfach++) {
+        if (Pruefungsfaecher[Pruefungsfach] != -1) {
+            counter++;
+        }
+    }
+    if (counter == 5) {
+        document.getElementById("Print_button").classList.remove("hidden");
+    } else {
+        document.getElementById("Print_button").classList.add("hidden");
     }
 }
 

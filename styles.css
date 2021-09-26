@@ -449,6 +449,13 @@ section {
     max-width: 300px;
     height: 80px;
 }
+#Print_button {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 100px;
+    background-color: rgb(94, 94, 110);
+    color: white;
+}
 #Beschreibungstext {
     color: white;
     font-family: "Arial";
@@ -634,7 +641,8 @@ section {
     #Beschreibungs_button, 
     #Beschreibungs_section, 
     #Gesetzes_div,
-    #Gesetze_button { 
+    #Gesetze_button,
+    #Print_button { 
         display: none !important; 
     }
     body {
