@@ -767,7 +767,7 @@ function PrintButtonAnzeigen() {
             counter++;
         }
     }
-    if (counter == 5) {
+    if (counter == 5 && Browser != 'iOS' && typeof window.print == 'function') {
         document.getElementById("Print_button").classList.remove("hidden");
     } else {
         document.getElementById("Print_button").classList.add("hidden");
