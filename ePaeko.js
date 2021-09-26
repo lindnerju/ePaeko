@@ -422,6 +422,7 @@ function CheckboxKlasse9Change(Fach, checked) {
                         Element.value = "";
                         Pruefungsfaecher[1] = -1;
                         RegelCheck();
+                        PrintButtonAnzeigen();
                     }
                 } else {
                     for (let Pruefungsfach = 1; Pruefungsfach < 5; Pruefungsfach++) {
@@ -430,6 +431,7 @@ function CheckboxKlasse9Change(Fach, checked) {
                             Element.value = "";
                             Pruefungsfaecher[Pruefungsfach] = -1;
                             RegelCheck();
+                            PrintButtonAnzeigen();
                         }
                     }
                 }
@@ -442,6 +444,7 @@ function CheckboxKlasse9Change(Fach, checked) {
                 Element.value = "";
                 Pruefungsfaecher[Pruefungsfach] = -1;
                 RegelCheck();
+                PrintButtonAnzeigen();
             }
         }
     }
@@ -462,6 +465,7 @@ function CheckboxKlasse10Change(Fach, checked) {
                             Element.value = "";
                             Pruefungsfaecher[Pruefungsfach] = -1;
                             RegelCheck();
+                            PrintButtonAnzeigen();
                         }
                     }
                 }
@@ -475,6 +479,7 @@ function CheckboxKlasse10Change(Fach, checked) {
                 Element.value = "";
                 Pruefungsfaecher[Pruefungsfach] = -1;
                 RegelCheck();
+                PrintButtonAnzeigen();
             }
         }
     }
