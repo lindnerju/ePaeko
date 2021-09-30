@@ -39,6 +39,9 @@ body {
     height: 100%;
 }
 
+:focus {
+    background: rgb(112, 112, 214) !important;
+}
 
 
 nav ul {
