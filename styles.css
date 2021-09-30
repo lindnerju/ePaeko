@@ -39,7 +39,7 @@ body {
     height: 100%;
 }
 
-:focus {
+:focus-visible {
     background: rgb(112, 112, 214) !important;
 }
 
