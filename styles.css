@@ -39,9 +39,9 @@ body {
     height: 100%;
 }
 
-:focus-visible:not(:hover) {
+/* :focus-visible:not(:hover) {
     background: rgb(112, 112, 214) !important;
-}
+} */
 
 
 nav ul {
